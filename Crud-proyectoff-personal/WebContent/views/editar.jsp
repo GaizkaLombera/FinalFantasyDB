@@ -13,26 +13,30 @@
 <form action="ffdbcontrol" method="post">
 <c:set var="juegos" value="${juegos}"> </c:set>
 	<input type="hidden" name="opcion" value="editar">
-	<input type="hidden" name="id" value="${producto.id}">
+	<input type="hidden" name="id" value="${juegos.id}">
 		<table border="1">
+	
 			<tr>
 				<td>Nombre:</td>
 				<td><input type="text" name="nombre" size="50" value="${juegos.nombre}"></td>
 			</tr>
 			<tr>
 				<td>Año de lanzamiento:</td>
-				<td><input type="text" name="cantidad" size="50" value="${juegos.fecha}"></td>
+				<td><input type="text" name="fecha" size="50" value="${juegos.fecha}"></td>
 			</tr>
 			<tr>
 				<td>Director:</td>
-				<td><input type="text" name="precio" size="50" value="${juegos.director}"></td>
+				<td><input type="text" name="director" size="50" value="${juegos.director}"></td>
 			</tr>	
 			<tr>
 				<td>Artista principal:</td>
-				<td><input type="text" name="precio" size="50" value="${juegos.artista}"></td>
+				<td><input type="text" name="artista" size="50" value="${juegos.artista}"></td>
 			</tr>		
 		</table>
 		<input type="submit" value="Guardar">
 	</form>
+	
+	<a href="index.jsp"> Volver al menú de opciones</a>
+	
 </body>
 </html>

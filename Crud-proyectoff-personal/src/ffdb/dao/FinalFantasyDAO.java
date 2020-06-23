@@ -24,14 +24,14 @@ public class FinalFantasyDAO {
 
 		try {
 			connection.setAutoCommit(false);
-			sql = "INSERT INTO list (id, name, date, director, artist) VALUES(?,?,?,?,?)";
+			sql = "INSERT INTO list (name, date, director, artist) VALUES(?,?,?,?)";
 			statement = connection.prepareStatement(sql);
 
-			statement.setString(1, null);
-			statement.setString(2, ff.getNombre());
-			statement.setString(3, ff.getFecha());
-			statement.setString(4, ff.getDirector());
-			statement.setString(5, ff.getArtista());
+			
+			statement.setString(1, ff.getNombre());
+			statement.setString(2, ff.getFecha());
+			statement.setString(3, ff.getDirector());
+			statement.setString(4, ff.getArtista());
 			
 
 			estadoOperacion = statement.executeUpdate() > 0;

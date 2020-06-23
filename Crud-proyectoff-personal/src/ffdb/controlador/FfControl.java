@@ -42,13 +42,13 @@ public class FfControl extends HttpServlet {
 		String opcion = request.getParameter("opcion");
 
 		/*--------------------*/
-		////INSERTAR////
+		//// INSERTAR////
 		if (opcion.equals("insertar")) {
 			System.out.println("Presionada la opcion: Añadir nueva entrada");
 			RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/insertar.jsp");
 			requestDispatcher.forward(request, response);
 		} else if (opcion.equals("listar")) {
-			
+
 			FinalFantasyDAO ffDAO = new FinalFantasyDAO();
 			List<FinalFantasyPOJO> lista = new ArrayList<>();
 			try {
@@ -66,12 +66,12 @@ public class FfControl extends HttpServlet {
 				e.printStackTrace();
 			}
 			System.out.println("Presionada la opcion: Lista de juegos");
-			
+
 			/*--------------------*/
-			////EDITAR////
+			//// EDITAR////
 		} else if (opcion.equals("editar")) {
 			int id = Integer.parseInt(request.getParameter("id"));
-			System.out.println("Editar id: " + id);
+			System.out.println("Editar juego con id: " + id);
 			FinalFantasyDAO ffDAO = new FinalFantasyDAO();
 			FinalFantasyPOJO ff = new FinalFantasyPOJO();
 			try {
@@ -87,20 +87,20 @@ public class FfControl extends HttpServlet {
 			}
 
 			/*--------------------*/
-			////ELIMINAR////
-		}else if (opcion.equals("eliminar")) {
+			//// ELIMINAR////
+		} else if (opcion.equals("eliminar")) {
 			FinalFantasyDAO ffDAO = new FinalFantasyDAO();
-			int id=Integer.parseInt(request.getParameter("id"));
+			int id = Integer.parseInt(request.getParameter("id"));
 			try {
 				ffDAO.eliminar(id);
-				System.out.println("Juego eliminado con id "+id+ " eliminado.");
+				System.out.println("Juego con id " + id + " eliminado.");
 				RequestDispatcher requestDispatcher = request.getRequestDispatcher("/index.jsp");
 				requestDispatcher.forward(request, response);
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
+
 		}
 		// response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
@@ -109,25 +109,26 @@ public class FfControl extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
-	
+
 	/*--------------------*/
-	////GUARDAR////
+	//// GUARDAR////
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String opcion = request.getParameter("opcion");
-		Date fechaActual = new Date();
 
 		if (opcion.equals("guardar")) {
 			FinalFantasyDAO ffDAO = new FinalFantasyDAO();
 			FinalFantasyPOJO ff = new FinalFantasyPOJO();
+
 			ff.setNombre(request.getParameter("nombre"));
 			ff.setFecha(request.getParameter("fecha"));
 			ff.setDirector(request.getParameter("director"));
 			ff.setArtista(request.getParameter("artista"));
+
 			try {
 				ffDAO.guardar(ff);
-				System.out.println("Entrga guardada en BD");
+				System.out.println("Entrega guardada en BD");
 				RequestDispatcher requestDispatcher = request.getRequestDispatcher("/index.jsp");
 				requestDispatcher.forward(request, response);
 
@@ -138,7 +139,12 @@ public class FfControl extends HttpServlet {
 		} else if (opcion.equals("editar")) {
 			FinalFantasyPOJO ff = new FinalFantasyPOJO();
 			FinalFantasyDAO ffDAO = new FinalFantasyDAO();
-
+			
+			System.out.println("Has presionado la opción EDITAR");
+			System.out.println(request.getParameter("id"));
+			System.out.println("OTRA COSA");
+		
+			
 			ff.setId(Integer.parseInt(request.getParameter("id")));
 			ff.setNombre(request.getParameter("nombre"));
 			ff.setFecha(request.getParameter("fecha"));
@@ -153,7 +159,7 @@ public class FfControl extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		} 
+		}
 
 		// doGet(request, response);
 	}

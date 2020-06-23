@@ -30,5 +30,7 @@
 			</tr>
 		</c:forEach>
 	</table>
+	
+	<a href="index.jsp"> Volver al menú de opciones</a>
 </body>
 </html>
