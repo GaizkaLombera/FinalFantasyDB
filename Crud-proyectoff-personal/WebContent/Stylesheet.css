@@ -1,1 +1,86 @@
 @charset "ISO-8859-1";
+
+@font-face {
+	font-family: "pixel-font";
+	src: url("PIXELADE.TTF");
+}
+
+* {
+	font-family: "pixel-font";
+	font-size: 30px;
+	color: white;
+}
+
+body {
+	padding-top:2%;
+	padding-bottom:2%;
+	background-color: rgb(37, 37, 37);
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+header {
+	display: block;
+	align-items: center;
+	background-color: blue;
+	border: solid white 5px;
+	border-radius: 20px;
+}
+
+img.img-cabecera {
+	max-width: 70%;
+	margin: 10px auto;
+	display: block;
+}
+
+#idTitulo {
+	display: flex;
+	align-items: flex-start;
+}
+
+.menuPrin {
+	list-style-type: none;
+}
+
+div.cuadro {
+	margin-top: 5px;
+	background-color: blue;
+	border: solid white 5px;
+	border-radius: 20px;
+}
+
+h1 {
+	margin: 0px;
+}
+
+h2 {
+	margin: 0px;
+	text-indent: 50px;
+}
+
+.tabla{
+	margin-top:3px;
+	margin-bottom:3px;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.editar,.boton{
+	color:#0BBAE6;
+}
+
+.eliminar{
+	color:red;
+}
+#nav{
+	display:flex;
+	justify-content:space-between;
+}
+.izq{
+	padding-left: 5%;
+	padding-right: 5%;
+}
+.der{
+	padding-left: 2%;
+	padding-right:5%;
+}

@@ -10,7 +10,7 @@
 <body>
 <h1>Editar entrada</h1>
 
-<form action="ffdbcontrol" method="post">
+<form  class="cuadro" action="ffdbcontrol" method="post">
 <c:set var="juegos" value="${juegos}"> </c:set>
 	<input type="hidden" name="opcion" value="editar">
 	<input type="hidden" name="id" value="${juegos.id}">
