@@ -141,9 +141,6 @@ public class FfControl extends HttpServlet {
 			FinalFantasyDAO ffDAO = new FinalFantasyDAO();
 			
 			System.out.println("Has presionado la opción EDITAR");
-			System.out.println(request.getParameter("id"));
-			System.out.println("OTRA COSA");
-		
 			
 			ff.setId(Integer.parseInt(request.getParameter("id")));
 			ff.setNombre(request.getParameter("nombre"));

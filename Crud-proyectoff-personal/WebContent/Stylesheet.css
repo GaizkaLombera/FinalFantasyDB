@@ -2,18 +2,35 @@
 
 @font-face {
 	font-family: "pixel-font";
-	src: url("PIXELADE.TTF");
+	src: url("font/PIXELADE.TTF");
 }
 
 * {
-	font-family: "pixel-font";
 	font-size: 30px;
+	font-family: "pixel-font";
+}
+h1,a{
+	font-size: 40px;
+}
+
+h1, h2, li, td {
 	color: white;
 }
 
+input[type=text] {
+	background-color: blue;
+	color: white;
+}
+
+input[type=submit]{
+	background-color: blue;
+	  border: none;
+	  color: #0BBAE6;
+}
+
 body {
-	padding-top:2%;
-	padding-bottom:2%;
+	padding-top: 0.2%;
+	padding-bottom: 2%;
 	background-color: rgb(37, 37, 37);
 	padding-left: 5%;
 	padding-right: 5%;
@@ -33,7 +50,7 @@ img.img-cabecera {
 	display: block;
 }
 
-#idTitulo {
+.claseTitulo {
 	display: flex;
 	align-items: flex-start;
 }
@@ -55,32 +72,49 @@ h1 {
 
 h2 {
 	margin: 0px;
-	text-indent: 50px;
 }
 
-.tabla{
-	margin-top:3px;
-	margin-bottom:3px;
+#idEditar {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#idLista {
+	margin-left: auto;
+	margin-right: auto;
+}
+#idGuardar {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.tabla {
+	margin-top: 3px;
+	margin-bottom: 3px;
 	margin-left: 5%;
 	margin-right: 5%;
 }
 
-.editar,.boton{
-	color:#0BBAE6;
+.editar, .boton {
+	color: #0BBAE6;
 }
 
-.eliminar{
-	color:red;
+.eliminar {
+	color: red;
 }
-#nav{
-	display:flex;
-	justify-content:space-between;
+
+.navVolver {
+	display: flex;
+	justify-content: space-between;
 }
-.izq{
+
+.izq {
 	padding-left: 5%;
-	padding-right: 5%;
+	width: 65%;
 }
-.der{
-	padding-left: 2%;
-	padding-right:5%;
+
+.der {
+	margin-left: 3px; padding-left : 5%;
+	width: 30%;
+	padding-left: 5%;
 }

@@ -10,16 +10,16 @@
 <body>
 
 	<header>
-		<img class="img-cabecera" src="LOGO3.png" alt="Logo de Final Fantasy Data Base">
+		<img class="img-cabecera" src="images/LOGO3.png" alt="Logo de Final Fantasy Data Base">
 	</header>
 	
 	<main>
 		<div class="cuadro">
-			<div id="idTitulo">
-				<img src="cursorff-peq.png" alt="Característico cursor de la saga Final Fantasy">
+			<div class="claseTitulo izq">
+				<img src="images/moogle.png" alt="Característico cursor de la saga Final Fantasy">
 				<h1>Menú principal</h1>
 			</div>
-			<div>
+			<div class="claseTitulo izq">
 				<h2>-Selecciona una opción:</h2>
 			</div>
 		</div>

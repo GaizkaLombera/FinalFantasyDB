@@ -10,12 +10,12 @@
 </head>
 <body>
 	<header>
-		<img class="img-cabecera" src="LOGO3.png" alt="Logo de Final Fantasy Data Base">
+		<img class="img-cabecera" src="images/LOGO3.png" alt="Logo de Final Fantasy Data Base">
 	</header>
-	<div id="nav">
+	<div class="navVolver">
 		<div class="cuadro izq">
-			<div id="idTitulo">
-				<img src="cursorff-peq.png" alt="Característico cursor de la saga Final Fantasy">
+			<div class="claseTitulo">
+				<img src="images/moogle.png" alt="Característico cursor de la saga Final Fantasy">
 				<h1>Lista de todas las entradas de Final Fantasy DB</h1>
 			</div>
 		</div>
@@ -24,7 +24,7 @@
 		</div>
 	</div>
 	<div class="cuadro">
-		<table class="tabla" border="1">
+		<table class="tabla " id="idLista" border="1">
 			<tr>
 				<td>Id</td>
 				<td>Nombre</td>
