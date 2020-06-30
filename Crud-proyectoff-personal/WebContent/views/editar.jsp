@@ -6,7 +6,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Editar entrga FF</title>
-<link rel="stylesheet" href="Stylesheet.css">
+
+	<!--Scrip de JS y Jquery-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="javascript/script.js"></script>
+    
+    <!--CSS-->
+	<link rel="stylesheet" href="css/Stylesheet.css">
 </head>
 <body>
 	<header> <img class="img-cabecera" src="images/LOGO3.png"
@@ -20,7 +26,10 @@
 			</div>
 		</div>
 		<div class="cuadro der">
-				<a class="boton"href="index.jsp"> Volver al menú de opciones</a>
+				<a id="op4" class="boton"href="index.jsp"> 
+					<img class="oculto" id="curOp4" src="images/cursorff-peq.png">
+					Volver al menú
+				</a>
 		</div>
 	</div>
 
@@ -53,7 +62,7 @@
 					value="${juegos.artista}"></td>
 			</tr>
 			<tr>
-				<td><input type="submit" value="Guardar"></td>
+				<td><input class="boton" type="submit" value="Guardar"></td>
 				
 			</tr>	
 		</table>

@@ -6,7 +6,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Listado FF</title>
-<link rel="stylesheet" href="Stylesheet.css">
+
+	<!--Scrip de JS y Jquery-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="javascript/script.js"></script>
+    
+    <!--CSS-->
+	<link rel="stylesheet" href="css/Stylesheet.css">
 </head>
 <body>
 	<header>
@@ -20,7 +26,10 @@
 			</div>
 		</div>
 		<div class="cuadro der">
-				<a class="boton"href="index.jsp"> Volver al menú de opciones</a>
+				<a id="op3" class="boton" href="index.jsp">
+					<img class="oculto" id="curOp3" src="images/cursorff-peq.png">
+					Volver al menú
+					</a>
 		</div>
 	</div>
 	<div class="cuadro">
@@ -40,7 +49,7 @@
 					<td> <c:out value="${ ffdbcontrol.fecha}"></c:out></td>
 					<td> <c:out value="${ ffdbcontrol.director}"></c:out> </td>
 					<td><c:out value="${ ffdbcontrol.artista}"></c:out> </td>
-					<td> <a class="eliminar" href="ffdbcontrol?opcion=eliminar&id=<c:out value="${ ffdbcontrol.id}"></c:out>"> Eliminar  </a><br/><a class="editar" href="ffdbcontrol?opcion=editar&id=<c:out value="${ ffdbcontrol.id}"></c:out>"> Editar  </a></td>
+					<td> <a class="eliminar boton" href="ffdbcontrol?opcion=eliminar&id=<c:out value="${ ffdbcontrol.id}"></c:out>"> Eliminar  </a><br/><a class="editar boton" href="ffdbcontrol?opcion=editar&id=<c:out value="${ ffdbcontrol.id}"></c:out>"> Editar  </a></td>
 				</tr>
 			</c:forEach>
 		</table>

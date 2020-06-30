@@ -5,7 +5,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Final Fantasy DB</title>
-<link rel="stylesheet" href="Stylesheet.css">
+   
+	<!--Scrip de JS y Jquery-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="javascript/script.js"></script>
+    
+    <!--CSS-->
+	<link rel="stylesheet" href="css/Stylesheet.css">
 </head>
 <body>
 
@@ -26,11 +32,21 @@
 		
 		<div class="cuadro">
 			<ul class="menuPrin">
-				<li><a class="boton" href="ffdbcontrol?opcion=insertar"> Introducir una entrada nueva</a></li>
+				<li>
+					<a class="boton" id="op1" href="ffdbcontrol?opcion=insertar">
+						<img class="oculto" id="curOp1" src="images/cursorff-peq.png">
+						Introducir una entrada nueva
+					</a>
+				</li>
 			</ul>
 				<hr>
 			<ul class="menuPrin">
-				<li><a class="boton" href="ffdbcontrol?opcion=listar"> Lista de juegos Final Fantasy</a></li>
+				<li>
+					<a class="boton" id="op2" href="ffdbcontrol?opcion=listar"> 
+						<img class="oculto" id="curOp2" src="images/cursorff-peq.png"> 
+						Lista de juegos Final Fantasy
+					</a>
+				</li>
 			</ul>
 		</div>
 

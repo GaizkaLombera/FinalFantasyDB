@@ -1,0 +1,129 @@
+@charset "ISO-8859-1";
+
+@font-face {
+	font-family: "pixel-font";
+	src: url("font/PIXELADE.TTF");
+}
+
+* {
+	font-size: 30px;
+	font-family: "pixel-font";
+}
+h1,a{
+	font-size: 40px;
+}
+
+h1, h2, li, td {
+	color: white;
+}
+
+input[type=text] {
+	background-color: blue;
+	color: white;
+}
+
+input[type=submit]{
+	background-color: blue;
+	  border: none;
+	  color: #0BBAE6;
+}
+
+body {
+	padding-top: 0.2%;
+	padding-bottom: 2%;
+	background-color: rgb(37, 37, 37);
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+header {
+	display: block;
+	align-items: center;
+	background-color: blue;
+	border: solid white 5px;
+	border-radius: 20px;
+}
+
+img.img-cabecera {
+	max-width: 70%;
+	margin: 10px auto;
+	display: block;
+}
+
+.claseTitulo {
+	display: flex;
+	align-items: flex-start;
+}
+
+.menuPrin {
+	list-style-type: none;
+}
+
+div.cuadro {
+	margin-top: 5px;
+	background-color: blue;
+	border: solid white 5px;
+	border-radius: 20px;
+}
+
+h1 {
+	margin: 0px;
+}
+
+h2 {
+	margin: 0px;
+}
+
+#idEditar {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#idLista {
+	margin-left: auto;
+	margin-right: auto;
+}
+#idGuardar {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.tabla {
+	margin-top: 3px;
+	margin-bottom: 3px;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.boton:hover{
+	color:greenyellow;
+}
+.boton{
+	text-align:rigth;
+}
+.editar, .boton {
+	color: #0BBAE6;
+}
+
+.eliminar {
+	color: red;
+}
+.navVolver {
+	height:20%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.izq {
+	padding-left: 5%;
+	width: 65%;
+}
+
+.der {
+	margin-left: 3px; 
+	width: 30%;
+	padding-left: 5%;
+}
+
+.oculto{
+	display:none;
+}
